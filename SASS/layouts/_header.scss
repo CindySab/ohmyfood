@@ -1,5 +1,6 @@
 header {
    @include flex_column;
+   height: 113px;
 }
 
 .logo {
@@ -13,6 +14,7 @@ header {
 .location {
     @include flex-row;
     width: 100%;
+    height: 50px;
     color: $dark-grey;
     background-color: $light-grey;
     gap: 17px;
