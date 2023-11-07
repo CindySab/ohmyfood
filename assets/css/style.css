@@ -15,7 +15,7 @@ h3 {
   font-weight: 500;
 }
 
-p {
+p, li {
   font-family: "Roboto", sans-serif;
 }
 
@@ -33,6 +33,10 @@ body {
   background-color: #F6F6F6;
 }
 
+li {
+  list-style-type: none;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -40,12 +44,14 @@ header {
   align-items: center;
   height: 113px;
 }
-
-.logo {
+header h1 {
   position: relative;
   z-index: 1;
   width: 100%;
-  padding: 14px 89px 13px 89px;
+  padding: 14px 89px 14px 89px;
+  margin: 0px;
+  height: 63px;
+  text-align: center;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -69,7 +75,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 60px;
 }
 
 .info {
@@ -78,14 +83,64 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 15px 30px;
+  padding: 15px 30px 60px 30px;
 }
 .info h2 {
   margin: 20px 0px 0px 0px;
+  padding: 0px 20px 0px 20px;
 }
 .info p {
   font-size: 18px;
   font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+.fonctionnement ol {
+  padding: 0px;
+  width: 100%;
+  list-style: none;
+  counter-reset: li;
+}
+.fonctionnement li {
+  margin: 0px 20px 25px 40px;
+  height: 72px;
+  max-width: 80%;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  counter-increment: li;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+.fonctionnement li::before {
+  display: inline-block;
+  content: counter(li);
+  background-color: #9356DC;
+  border-radius: 50px;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  text-align: center;
+  margin-right: 20px;
+  margin-left: -15px;
+  margin-top: 20px;
+}
+.fonctionnement i {
+  margin-right: 20px;
+  color: #7E7E7E;
+}
+.fonctionnement p {
+  align-self: flex-start;
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 button {
