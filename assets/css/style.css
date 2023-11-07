@@ -69,6 +69,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 60px;
 }
 
 .info {
@@ -80,7 +81,7 @@ header {
   padding: 15px 30px;
 }
 .info h2 {
-  margin: 0px 20px;
+  margin: 20px 0px 0px 0px;
 }
 .info p {
   font-size: 18px;
