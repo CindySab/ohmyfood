@@ -220,7 +220,20 @@ header h1 {
   padding: 0px;
 }
 
-.fa-solid {
+.badge {
+  width: 80px;
+  height: 29px;
+  background-color: #99E2D0;
+  text-align: center;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 500;
+}
+.badge p {
+  margin: 0px;
+}
+
+.fa-solid.fa-heart {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -262,10 +275,29 @@ footer {
   margin: 0px;
   font-size: 18px;
   font-weight: 400;
+  margin: 0px 0px 16px 0px;
 }
-.section-footer p {
+.section-footer .font-500 {
   font-size: 16px;
   font-weight: 500;
+  margin: 7px;
+}
+.section-footer .font-400 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 7px 0px 12px 0px;
+}
+
+.footer-icone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.footer-icone p {
+  margin: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */

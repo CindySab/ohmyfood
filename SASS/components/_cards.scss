@@ -24,8 +24,21 @@
     }
 }
 
+.badge {
+    width: 80px;
+    height: 29px;
+    background-color: $light-green;
+    text-align: center;
+    color: $dark-green;
+    font-size: 14px;
+    font-weight: 500;
+    & p {
+        margin: 0px;
+    }
+}
+
 // Animation coeur //
-.fa-solid {
+.fa-solid.fa-heart {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
