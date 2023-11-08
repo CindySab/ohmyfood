@@ -25,6 +25,7 @@
 }
 
 .badge {
+    @include flex-row;
     width: 80px;
     height: 29px;
     background-color: $light-green;
@@ -33,7 +34,7 @@
     font-size: 14px;
     font-weight: 500;
     & p {
-        margin: 0px;
+        margin: 5px 0px 0px 0px;
     }
 }
 
