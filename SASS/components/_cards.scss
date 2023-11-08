@@ -18,12 +18,21 @@
     & p {
         font-size: 17px;
         font-weight: 300;
-        margin: 10px 0px 15px 16px;
+        margin: 3px 0px 15px 16px;
         padding: 0px;
     }
     & i {
-        align-self: flex-end;
-        margin-top: -10px;
-        margin-right: 25px;
+        position: relative;
+        left: 140px;
+        top: -10px;
     }
+}
+
+.fi-checkbox {
+	font-size: 24px;
+	cursor: pointer;
+    caret-color: transparent;
+	display: block;
+	display: flex;
+    align-items: center;
 }
