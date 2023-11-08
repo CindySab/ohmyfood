@@ -2,18 +2,28 @@
     @include flex_column;
     background-color: white;
     min-height: 251px;
-    width: 340px;
+    min-width: 100%;
     border-radius: 15px;
     color: black;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
     & img {
-        border-radius: 15px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        min-width: 100%;
     }
     & h4 {
         align-self: flex-start;
+        margin: 16px 0px 0px 16px;
     }
     & p {
         font-size: 17px;
         font-weight: 300;
+        margin: 10px 0px 15px 16px;
+        padding: 0px;
+    }
+    & i {
+        align-self: flex-end;
+        margin-top: -10px;
+        margin-right: 25px;
     }
 }

@@ -34,7 +34,7 @@ a {
 }
 
 body {
-  min-width: 320px;
+  min-width: 375px;
   margin: 0;
   background-color: #F6F6F6;
 }
@@ -156,10 +156,10 @@ header h1 {
   justify-content: center;
   align-items: center;
   width: 100%;
+  padding: 20px;
 }
 .restaurants p {
   align-self: flex-start;
-  padding-left: 20px;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 10px;
@@ -197,20 +197,30 @@ header h1 {
   align-items: center;
   background-color: white;
   min-height: 251px;
-  width: 340px;
+  min-width: 100%;
   border-radius: 15px;
   color: black;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .card img {
-  border-radius: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  min-width: 100%;
 }
 .card h4 {
   align-self: flex-start;
+  margin: 16px 0px 0px 16px;
 }
 .card p {
   font-size: 17px;
   font-weight: 300;
+  margin: 10px 0px 15px 16px;
+  padding: 0px;
+}
+.card i {
+  align-self: flex-end;
+  margin-top: -10px;
+  margin-right: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
