@@ -15,6 +15,12 @@ h3 {
   font-weight: 500;
 }
 
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 p, li {
   font-family: "Roboto", sans-serif;
 }
@@ -103,6 +109,13 @@ header h1 {
   width: 100%;
   background-color: white;
 }
+.fonctionnement p {
+  align-self: flex-start;
+  padding-left: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 .fonctionnement ol {
   padding: 0px;
   width: 100%;
@@ -136,14 +149,28 @@ header h1 {
   margin-right: 20px;
   color: #7E7E7E;
 }
-.fonctionnement p {
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.restaurants p {
   align-self: flex-start;
   padding-left: 20px;
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
-button {
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   height: 50px;
   border-radius: 25px;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -154,9 +181,36 @@ button {
   font-size: 16px;
   font-weight: 500;
 }
+.button:hover {
+  opacity: 75%;
+  transition-duration: 300ms;
+}
 
-.button-index {
+.info .button {
   width: 218px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  min-height: 251px;
+  width: 340px;
+  border-radius: 15px;
+  color: black;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.card img {
+  border-radius: 15px;
+}
+.card h4 {
+  align-self: flex-start;
+}
+.card p {
+  font-size: 17px;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */
