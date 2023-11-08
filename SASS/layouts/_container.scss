@@ -68,10 +68,11 @@
     @include flex_column;
     width: 100%;
     padding: 20px;
+    gap: 20px;
     & p {
         align-self: flex-start;
         font-size: 24px;
         font-weight: 700;
-        margin-bottom: 10px; 
+        margin-bottom: 10px;
     }
 }

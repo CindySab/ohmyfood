@@ -35,7 +35,7 @@ a {
 
 body {
   min-width: 375px;
-  margin: 0;
+  margin: 0px;
   background-color: #F6F6F6;
 }
 
@@ -157,6 +157,7 @@ header h1 {
   align-items: center;
   width: 100%;
   padding: 20px;
+  gap: 20px;
 }
 .restaurants p {
   align-self: flex-start;
@@ -183,7 +184,7 @@ header h1 {
 }
 .button:hover {
   opacity: 75%;
-  transition-duration: 300ms;
+  transition-duration: 300ms ease-out;
 }
 
 .info .button {
@@ -203,6 +204,7 @@ header h1 {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
 }
 .card img {
+  object-fit: cover;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   min-width: 100%;
@@ -217,19 +219,57 @@ header h1 {
   margin: 3px 0px 15px 16px;
   padding: 0px;
 }
-.card i {
-  position: relative;
-  left: 140px;
-  top: -10px;
+
+.fa-solid {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
 }
 
-.fi-checkbox {
-  font-size: 24px;
-  cursor: pointer;
-  caret-color: transparent;
-  display: block;
-  display: flex;
-  align-items: center;
+.heart-checkbox {
+  position: relative;
+  left: 125px;
+  top: -55px;
+  width: 0px;
+  gap: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.heart-checkbox input[type=checkbox], .heart-checkbox .checked {
+  display: none;
+}
+
+.heart-checkbox input[type=checkbox]:checked ~ .checked {
+  display: inline-block;
+}
+
+.heart-checkbox input[type=checkbox]:checked ~ .unchecked {
+  display: none;
+}
+
+footer {
+  background-color: #353535;
+}
+
+.section-footer {
+  color: white;
+  padding: 22px 25px 12px 25px;
+}
+.section-footer h5 {
+  font-family: "Shrikhand", serif;
+  margin: 0px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.section-footer .font-500 {
+  font-size: 16px;
+  font-weight: 500;
+}
+.section-footer .font-400 {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=style.css.map */

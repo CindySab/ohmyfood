@@ -1,0 +1,22 @@
+footer {
+    background-color: $dark-grey;
+}
+
+.section-footer {
+    color: white;
+    padding: 22px 25px 12px 25px;
+    & h5 {
+        font-family: $font-logo;
+        margin: 0px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    & .font-500 {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    & .font-400 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
