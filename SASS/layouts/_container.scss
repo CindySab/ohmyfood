@@ -2,6 +2,8 @@
     @include flex_column;
 }
 
+// INDEX
+
 .info {
     @include flex_column;
     text-align: center;
@@ -74,5 +76,110 @@
         font-size: 24px;
         font-weight: 700;
         margin-bottom: 0px;
+    }
+}
+
+//PAGE RESTAURANTS
+
+.container-restaurants {
+    @include flex_column;
+    background-color: $light-grey;
+}
+
+.menu-restaurants {
+    @include flex-column-start;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background-color: $light-grey;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    top: -3.5em;
+    padding-left: 10px;
+    padding-right: 10px;
+    & h2 {
+        align-self: flex-start;
+        margin: 23px 0px 10px 15px;
+        font-family: $font-logo;
+        font-size: 28px;
+        font-weight: 400;
+    }
+}
+
+.img-restaurants {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+}
+
+.heart-checkbox-restaurants {
+    position: absolute;
+    z-index: 2;
+    top: 1em;
+    right: 2em;
+    width: 0px;
+    gap: 20px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.heart-checkbox-restaurants input[type="checkbox"],.heart-checkbox-restaurants .checked {
+    display: none;
+}
+
+.heart-checkbox-restaurants input[type="checkbox"]:checked ~ .checked{
+    display: inline-block;
+}
+
+.heart-checkbox-restaurants input[type="checkbox"]:checked ~ .unchecked{
+    display: none;
+}
+
+.entrees {
+    @include flex_column;
+    width: 100%;
+    & h3 {
+        font-family: $font-text;
+        font-size: 16px;
+        font-weight: 300;
+        align-self: flex-start;
+        margin-bottom: 26px;
+    }
+    & .souligne {
+        text-decoration: underline solid $tertiaire;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 10px;
+    }
+}
+
+.plat-description {
+    width: 100%;
+    height: 69px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    align-items: center;
+    & .plat {
+        margin: 0px 0px 5px 0px;
+        font-family: $font-text;
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+.plat-prix {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    & p {
+        font-family: $font-text;
+        font-size: 15px;
+        font-weight: 300;
+        margin: 0px 0px 5px 0px;
+    }
+    & .prix {
+        font-weight: 500;
     }
 }

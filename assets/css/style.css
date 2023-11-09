@@ -76,6 +76,25 @@ header h1 {
   color: #353535;
 }
 
+.titre {
+  position: relative;
+  z-index: 1;
+  box-shadow: none;
+}
+
+.fa-arrow-left {
+  position: absolute;
+  z-index: 2;
+  color: #353535;
+  font-size: 25px;
+  top: 1em;
+  left: 1em;
+}
+
+.header-restaurants {
+  height: 63px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -166,6 +185,117 @@ header h1 {
   margin-bottom: 0px;
 }
 
+.container-restaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #EAEAEA;
+}
+
+.menu-restaurants {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background-color: #EAEAEA;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  top: -3.5em;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.menu-restaurants h2 {
+  align-self: flex-start;
+  margin: 23px 0px 10px 15px;
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.img-restaurants {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 275px;
+  object-fit: cover;
+}
+
+.heart-checkbox-restaurants {
+  position: absolute;
+  z-index: 2;
+  top: 1em;
+  right: 2em;
+  width: 0px;
+  gap: 20px;
+  text-align: center;
+  font-size: 25px;
+}
+
+.heart-checkbox-restaurants input[type=checkbox], .heart-checkbox-restaurants .checked {
+  display: none;
+}
+
+.heart-checkbox-restaurants input[type=checkbox]:checked ~ .checked {
+  display: inline-block;
+}
+
+.heart-checkbox-restaurants input[type=checkbox]:checked ~ .unchecked {
+  display: none;
+}
+
+.entrees {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.entrees h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  align-self: flex-start;
+  margin-bottom: 26px;
+}
+.entrees .souligne {
+  text-decoration: underline solid #99E2D0;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 10px;
+}
+
+.plat-description {
+  width: 100%;
+  height: 69px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px;
+  align-items: center;
+}
+.plat-description .plat {
+  margin: 0px 0px 5px 0px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.plat-prix {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.plat-prix p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0px 0px 5px 0px;
+}
+.plat-prix .prix {
+  font-weight: 500;
+}
+
 .button {
   display: flex;
   flex-direction: row;
@@ -191,6 +321,10 @@ header h1 {
   width: 218px;
 }
 
+.button-restaurants {
+  width: 168px;
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -199,7 +333,7 @@ header h1 {
   position: relative;
   z-index: 1;
   background-color: white;
-  min-height: 251px;
+  height: 251px;
   min-width: 100%;
   border-radius: 15px;
   color: black;
@@ -210,7 +344,7 @@ header h1 {
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   width: 100%;
-  height: 231px;
+  height: 70%;
 }
 .card h4 {
   align-self: flex-start;
@@ -242,6 +376,7 @@ header h1 {
 }
 .badge p {
   margin: 5px 0px 0px 0px;
+  font-weight: bold;
 }
 
 .fa-solid.fa-heart {
