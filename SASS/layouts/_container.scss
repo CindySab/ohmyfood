@@ -137,7 +137,7 @@
     display: none;
 }
 
-.entrees {
+.catégories {
     @include flex_column;
     width: 100%;
     & h3 {
@@ -161,6 +161,7 @@
     border-radius: 15px;
     padding: 10px;
     align-items: center;
+    margin-bottom: 10px;
     & .plat {
         margin: 0px 0px 5px 0px;
         font-family: $font-text;
