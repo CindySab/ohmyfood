@@ -27,53 +27,54 @@
     }
 }
 
-.badge {
+.badge::after {
     position: absolute;
     z-index: 2;
     top: 1em;
     right: 1em;
+    content: "Nouveau";
     @include flex-row;
     width: 80px;
     height: 29px;
     background-color: $light-green;
-    text-align: center;
     color: $dark-green;
     font-size: 14px;
-    font-weight: 500;
-    & p {
-        margin: 5px 0px 0px 0px;
-        font-weight: bold;
-    }
+    margin: 5px 0px 0px 0px;
+    font-weight: bold;
+    font-family: $font-text;
 }
 
 // Animation coeur //
-.fa-solid.fa-heart {
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: linear-gradient(to top, $secondaire, $primaire);
-}
 
 .heart-checkbox {
     position: absolute;
     z-index: 2;
     bottom: 1em;
     right: 2em;
-    width: 0px;
-    gap: 20px;
-    text-align: center;
     font-size: 25px;
+    & .fa-solid.fa-heart {
+        opacity: 0;
+    }
+    &:hover .fa-regular.fa-heart {
+        opacity: 0;
+    }
 }
 
-.heart-checkbox input[type="checkbox"],.heart-checkbox .checked {
-    display: none;
+.fa-solid.fa-heart {
+    opacity: 0;
+    margin: -1em;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to top, $secondaire, $primaire);
+    &.fa-solid.fa-heart:hover {
+        opacity: 1;
+    }
 }
 
-.heart-checkbox input[type="checkbox"]:checked ~ .checked{
-    display: inline-block;
-}
 
-.heart-checkbox input[type="checkbox"]:checked ~ .unchecked{
-    display: none;
-}
+
+
+
+
 

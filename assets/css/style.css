@@ -393,11 +393,12 @@ header h1 {
   padding: 0px;
 }
 
-.badge {
+.badge::after {
   position: absolute;
   z-index: 2;
   top: 1em;
   right: 1em;
+  content: "Nouveau";
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -405,21 +406,11 @@ header h1 {
   width: 80px;
   height: 29px;
   background-color: #99E2D0;
-  text-align: center;
   color: #008766;
   font-size: 14px;
-  font-weight: 500;
-}
-.badge p {
   margin: 5px 0px 0px 0px;
   font-weight: bold;
-}
-
-.fa-solid.fa-heart {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to top, #FF79DA, #9356DC);
+  font-family: "Roboto", sans-serif;
 }
 
 .heart-checkbox {
@@ -427,22 +418,25 @@ header h1 {
   z-index: 2;
   bottom: 1em;
   right: 2em;
-  width: 0px;
-  gap: 20px;
-  text-align: center;
   font-size: 25px;
 }
-
-.heart-checkbox input[type=checkbox], .heart-checkbox .checked {
-  display: none;
+.heart-checkbox .fa-solid.fa-heart {
+  opacity: 0;
+}
+.heart-checkbox:hover .fa-regular.fa-heart {
+  opacity: 0;
 }
 
-.heart-checkbox input[type=checkbox]:checked ~ .checked {
-  display: inline-block;
+.fa-solid.fa-heart {
+  opacity: 0;
+  margin: -1em;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to top, #FF79DA, #9356DC);
 }
-
-.heart-checkbox input[type=checkbox]:checked ~ .unchecked {
-  display: none;
+.fa-solid.fa-heart.fa-solid.fa-heart:hover {
+  opacity: 1;
 }
 
 footer {
