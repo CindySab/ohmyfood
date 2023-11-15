@@ -1,9 +1,10 @@
 // Animation validation des plats 
 
-.animation-check input[type="checkbox"],.animation-check .checked {
-    display: none;
-}
-
-.animation-check input[type="checkbox"]:checked ~ .checked{
-    display: inline-block;
+@keyframes heart {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

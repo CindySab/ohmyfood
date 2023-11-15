@@ -10,6 +10,8 @@
   "author": "Cindy Chassin",
   "license": "ISC",
   "dependencies": {
+    "animadio": "^6.2.5",
     "sass": "^1.69.5"
-  }
+  },
+  "devDependencies": {}
 }
