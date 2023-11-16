@@ -23,11 +23,9 @@
     @include flex_column;
     width: 100%;
     background-color: white;
-    & p {
+    & h2 {
         align-self: flex-start;
         padding-left: 20px;
-        font-size: 24px;
-        font-weight: 700;
         margin-bottom: 10px;
     }
     & ol {
@@ -81,7 +79,7 @@
     width: 100%;
     padding: 20px;
     gap: 20px;
-    & p {
+    & h2 {
         align-self: flex-start;
         font-size: 24px;
         font-weight: 700;
@@ -134,6 +132,7 @@
     gap: 20px;
     text-align: center;
     font-size: 25px;
+    transition: all 2s;
     & input[type="checkbox"],
         & .checked {
             display: none;
@@ -169,6 +168,8 @@
 }
 
 .catégories-plat {
+    animation: apparitionplat 1s ease-in-out;
+    animation-fill-mode: backwards;
     background-color: white;
     width: 100%;
     height: 69px;
@@ -184,7 +185,7 @@
     & input[type="checkbox"]:checked ~ {
         & .plat-check{
             margin-right: -10px;
-            transition-duration: 2s;
+            transition-duration: 250ms;
         }
         & .plat-check i {
             transform: rotate(0turn);
@@ -224,8 +225,7 @@
         display: flex;
         justify-content: flex-end;
         align-items: flex-end;
-        padding-right: 50px;
-        padding-left: 10px;
+        padding: 0px 50px 3.5px 10px;
         margin: 0;
         font-size: 15px;
         font-weight: 700;
@@ -237,10 +237,10 @@
         @include flex-row;
         width: 59px;
         margin: -16px -75px -16px -30px;
-        transition: all 2s;
+        transition: all 250ms ease-out;
         & i {
             transform: rotate(-1turn);
-            transition: all 2s;
+            transition: all 1000ms;
         }
     }
 }
