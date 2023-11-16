@@ -38,6 +38,9 @@ header {
     font-size: 25px;
     top: 1em;
     left: 1em;
+    &:hover {
+        transform: scale(1.1);
+    }
 }
 
 .header-restaurants {
