@@ -375,7 +375,7 @@ header h1 {
   overflow: hidden;
   text-overflow: ellipsis;
   transition-property: transform;
-  transition: all 300ms ease-in-out;
+  transition: all 300ms ease-out;
 }
 .catégories-plat:hover {
   transform: scale(1.02);
