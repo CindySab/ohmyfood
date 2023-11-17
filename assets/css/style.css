@@ -111,6 +111,37 @@ header h1 {
   align-items: center;
 }
 
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  background-color: white;
+  animation: loader 2s;
+  animation-delay: 3s;
+  animation-fill-mode: both;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  gap: 15px;
+}
+.loader .carrot-one {
+  color: #9356DC;
+  opacity: 75%;
+}
+.loader .carrot-two {
+  color: #FF79DA;
+  opacity: 75%;
+}
+.loader .carrot-three {
+  color: #99E2D0;
+  opacity: 75%;
+}
+
 .info {
   display: flex;
   flex-direction: column;
@@ -254,7 +285,7 @@ header h1 {
 .header-menu {
   position: relative;
   z-index: 1;
-  width: 100%;
+  min-width: 345px;
 }
 .header-menu h2 {
   align-self: flex-start;
@@ -314,12 +345,17 @@ header h1 {
   position: absolute;
   z-index: 2;
   top: 2em;
-  right: 2em;
+  right: 1.5em;
   width: 0px;
   gap: 20px;
   text-align: center;
   font-size: 25px;
   transition: all 2s;
+}
+@media all and (min-width: 375px) {
+  .heart-checkbox-restaurants {
+    right: 0.5em;
+  }
 }
 .heart-checkbox-restaurants input[type=checkbox], .heart-checkbox-restaurants .checked {
   display: none;
@@ -693,6 +729,12 @@ footer {
   100% {
     opacity: 1;
     transform: translateY(0%);
+  }
+}
+@keyframes loader {
+  100% {
+    opacity: 0;
+    z-index: -10;
   }
 }
 
