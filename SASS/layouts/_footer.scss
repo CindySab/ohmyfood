@@ -5,30 +5,53 @@ footer {
 .section-footer {
     color: white;
     padding: 22px 25px 12px 25px;
+    @media all and (min-width:768px){
+        display: flex;
+        justify-content: flex-end;
+        padding: 30px 25px 12px 25px;
+        & h5 {
+            order: 5;
+            align-self: center;
+            padding-top: 10px;
+        }
+        & ol {
+            display: flex;
+        }
+        & .font-400 {
+            margin-top: 20px;
+            margin-right: 70px;
+            gap: 10px;
+        }
+        & .footer-icone {
+            margin-right: 40px;
+            gap: 10px;
+        }
+    }
     & h5 {
         font-family: $font-logo;
         margin: 0px;
         font-size: 18px;
         font-weight: 400;
-        margin: 0px 0px 16px 0px;
     }
-    & .font-500 {
-        font-size: 16px;
-        font-weight: 500;
-        margin: 7px;
+    & ol {
+        margin: 0;
+        padding: 0;
     }
-    & .font-400 {
-        font-size: 16px;
-        font-weight: 400;
-        margin: 7px 0px 12px 0px;
+    & .footer-icone {
+        margin-top: 20px;
+    }
+    & li {
+        margin-bottom: 10px;
+        & i {
+            margin-right: 15px;
+            width: 12px;
+        }
     }
 }
 
-.footer-icone {
-    @include flex-row;
-    justify-content: flex-start;
-    gap: 10px;
-    & p {
-        margin: 5px;
+.footer-restaurant {
+    margin-top: -3.5em;
+    @media all and (min-width:768px){
+        margin-top: -1.5em;
     }
 }

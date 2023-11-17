@@ -56,6 +56,7 @@ header {
   height: 113px;
 }
 header h1 {
+  line-height: 40px;
   position: relative;
   z-index: 1;
   width: 100%;
@@ -92,7 +93,7 @@ header h1 {
   z-index: 2;
   color: #353535;
   font-size: 25px;
-  top: 1em;
+  top: 0.85em;
   left: 1em;
 }
 .fa-arrow-left:hover {
@@ -247,7 +248,25 @@ header h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #EAEAEA;
+  background-color: white;
+}
+
+.header-menu {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+.header-menu h2 {
+  align-self: flex-start;
+  margin: 23px 0px 10px 15px;
+  font-family: "Shrikhand", serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+@media all and (min-width: 768px) {
+  .header-menu h2 {
+    align-self: center;
+  }
 }
 
 .menu-restaurants {
@@ -261,30 +280,40 @@ header h1 {
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   top: -3.5em;
+  padding: 0px 10px 20px 10px;
   padding-left: 10px;
   padding-right: 10px;
 }
-.menu-restaurants h2 {
-  align-self: flex-start;
-  margin: 23px 0px 10px 15px;
-  font-family: "Shrikhand", serif;
-  font-size: 28px;
-  font-weight: 400;
+@media all and (min-width: 768px) {
+  .menu-restaurants {
+    width: 73%;
+    top: -1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .img-restaurants {
-  position: relative;
-  z-index: 1;
   width: 100%;
   height: 275px;
-  object-fit: cover;
+  margin: 0;
+  background-image: url(../../assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+  background-size: cover;
+}
+@media all and (min-width: 768px) {
+  .img-restaurants {
+    background-position: 50% 60%;
+    height: 343px;
+  }
 }
 
 .heart-checkbox-restaurants {
   cursor: pointer;
   position: absolute;
   z-index: 2;
-  top: 1em;
+  top: 2em;
   right: 2em;
   width: 0px;
   gap: 20px;
@@ -310,12 +339,18 @@ header h1 {
   align-items: center;
   width: 100%;
 }
+@media all and (min-width: 768px) {
+  .catégories {
+    width: 60%;
+  }
+}
 .catégories h3 {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
   align-self: flex-start;
   margin-bottom: 26px;
+  margin-top: 0;
 }
 .catégories .souligne {
   text-decoration: underline solid #99E2D0;
@@ -338,6 +373,12 @@ header h1 {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-overflow: ellipsis;
+  transition-property: transform;
+  transition: all 2s ease-in-out;
+}
+.catégories-plat:hover {
+  transform: scale(1.02);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.6);
 }
 .catégories-plat input[type=checkbox]:checked ~ .plat-check {
   margin-right: -10px;
@@ -402,6 +443,18 @@ header h1 {
   transition: all 1000ms;
 }
 
+.catégories-plat.platone {
+  animation-delay: 0.2s;
+}
+
+.catégories-plat.plattwo {
+  animation-delay: 0.6s;
+}
+
+.catégories-plat.platthree {
+  animation-delay: 0.8s;
+}
+
 .button {
   display: flex;
   flex-direction: row;
@@ -429,9 +482,9 @@ header h1 {
 }
 
 .button-restaurants {
-  position: relative;
-  bottom: 2em;
   width: 168px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .conteneur-card {
@@ -464,10 +517,40 @@ header h1 {
 }
 .card img {
   object-fit: cover;
+  object-position: 50% 62%;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
   width: 100%;
-  height: 70%;
+  height: 73%;
+}
+@media all and (min-width: 768px) {
+  .card img {
+    object-position: 50% 59%;
+  }
+}
+.card .jay {
+  object-position: 50% 99%;
+}
+@media all and (min-width: 768px) {
+  .card .jay {
+    object-position: 50% 60%;
+  }
+}
+.card .toa {
+  object-position: 50% 101%;
+}
+@media all and (min-width: 768px) {
+  .card .toa {
+    object-position: 50% 70%;
+  }
+}
+.card .louis {
+  object-position: 50% 100%;
+}
+@media all and (min-width: 768px) {
+  .card .louis {
+    object-position: 50% 70%;
+  }
 }
 .card h4 {
   align-self: flex-start;
@@ -539,34 +622,58 @@ footer {
   color: white;
   padding: 22px 25px 12px 25px;
 }
+@media all and (min-width: 768px) {
+  .section-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 25px 12px 25px;
+  }
+  .section-footer h5 {
+    order: 5;
+    align-self: center;
+    padding-top: 10px;
+  }
+  .section-footer ol {
+    display: flex;
+  }
+  .section-footer .font-400 {
+    margin-top: 20px;
+    margin-right: 70px;
+    gap: 10px;
+  }
+  .section-footer .footer-icone {
+    margin-right: 40px;
+    gap: 10px;
+  }
+}
 .section-footer h5 {
   font-family: "Shrikhand", serif;
   margin: 0px;
   font-size: 18px;
   font-weight: 400;
-  margin: 0px 0px 16px 0px;
 }
-.section-footer .font-500 {
-  font-size: 16px;
-  font-weight: 500;
-  margin: 7px;
+.section-footer ol {
+  margin: 0;
+  padding: 0;
 }
-.section-footer .font-400 {
-  font-size: 16px;
-  font-weight: 400;
-  margin: 7px 0px 12px 0px;
+.section-footer .footer-icone {
+  margin-top: 20px;
+}
+.section-footer li {
+  margin-bottom: 10px;
+}
+.section-footer li i {
+  margin-right: 15px;
+  width: 12px;
 }
 
-.footer-icone {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
+.footer-restaurant {
+  margin-top: -3.5em;
 }
-.footer-icone p {
-  margin: 5px;
+@media all and (min-width: 768px) {
+  .footer-restaurant {
+    margin-top: -1.5em;
+  }
 }
 
 @keyframes heart {

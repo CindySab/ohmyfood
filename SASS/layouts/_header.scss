@@ -2,6 +2,7 @@ header {
     @include flex_column;
     height: 113px;
     & h1 {
+    line-height: 40px;
     position: relative;
     z-index: 1;
     width: 100%;
@@ -36,7 +37,7 @@ header {
     z-index: 2;
     color: $dark-grey;
     font-size: 25px;
-    top: 1em;
+    top: 0.85em;
     left: 1em;
     &:hover {
         transform: scale(1.1);
