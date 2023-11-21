@@ -39,6 +39,7 @@ footer {
     }
     & .footer-icone {
         margin-top: 20px;
+        font-weight: 500;
     }
     & li {
         margin-bottom: 10px;
@@ -46,6 +47,14 @@ footer {
             margin-right: 15px;
             width: 12px;
         }
+    }
+    & a {
+        color: white;
+    }
+    & .font-400 {
+        font-size: 16px;
+        font-weight: 400;
+        font-family: $font-text;
     }
 }
 
