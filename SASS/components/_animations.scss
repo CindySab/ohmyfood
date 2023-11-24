@@ -27,17 +27,20 @@
     }
 }
 
-@keyframes jump {
+@keyframes bounceun {
     0% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(0.5rem);
-    }
-    75% {
-        transform: translateY(-0.5rem);
+        transform: scaleY(1.5);
     }
     100% {
-        transform: translateY(0);
+        transform: scaleY(0.7);
+    }
+}
+
+@keyframes bouncedeux {
+    0% {
+        transform: scaleY(2.5);
+    }
+    100% {
+        transform: scaleY(0.7);
     }
 }

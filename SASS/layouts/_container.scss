@@ -18,22 +18,34 @@
     @include flex-row;
     font-size: 40px;
     gap: 15px;
-    & .carrot-one {
-        color: $primaire;
-        margin-bottom: 10px;
-        animation: jump 1s infinite;
+    & .barreun {
+        width: 15px;
+        height: 40px;
+        background-color: $primaire;
+        border-radius: 5px;
+        transform-origin: bottom;
+        animation: bounceun 0.5s alternate infinite;
+        box-shadow: 0px 50px 0px 0px rgba($color: $primaire, $alpha: 0.2);
     }
-    & .carrot-two {
-        color: $tertiaire;
-        margin-bottom: 10px;
-        animation: jump 1.2s infinite;
-        animation-delay: .2s;
+    & .barredeux {
+        width: 15px;
+        height: 40px;
+        background-color: $tertiaire; 
+        border-radius: 5px;
+        transform-origin: bottom;
+        animation: bouncedeux 0.5s alternate infinite;
+        box-shadow: 0px 50px 0px 0px rgba($color: $tertiaire, $alpha: 0.3);
+        animation-delay: 200ms;
     }
-    & .carrot-three {
-        color: $secondaire;
-        margin-bottom: 10px;
-        animation: jump 1.4s infinite;
-        animation-delay: .4s;
+    & .barretrois {
+        width: 15px;
+        height: 40px;
+        background-color: $secondaire; 
+        border-radius: 5px;
+        transform-origin: bottom;
+        animation: bounceun 0.5s alternate infinite;
+        box-shadow: 0px 50px 0px 0px rgba($color: $secondaire, $alpha: 0.2);
+        animation-delay: 400ms
     }
 }
 
