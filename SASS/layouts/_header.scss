@@ -1,6 +1,5 @@
 header {
     @include flex_column;
-    height: 113px;
     & h1 {
         line-height: 40px;
         position: relative;

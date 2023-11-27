@@ -54,7 +54,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 113px;
 }
 header h1 {
   line-height: 40px;
@@ -306,20 +305,28 @@ header h1 {
 }
 
 .header-menu {
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   z-index: 1;
-  min-width: 345px;
+  width: 90%;
 }
 .header-menu h2 {
   align-self: flex-start;
-  margin: 23px 0px 10px 15px;
   font-family: "Shrikhand", serif;
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 400;
 }
 @media all and (min-width: 768px) {
   .header-menu h2 {
     align-self: center;
+  }
+}
+@media all and (min-width: 768px) {
+  .header-menu {
+    justify-content: center;
+    gap: 20px;
   }
 }
 
@@ -408,20 +415,11 @@ header h1 {
 
 .heart-checkbox-restaurants {
   cursor: pointer;
-  position: absolute;
   z-index: 2;
-  top: 2em;
-  right: 1.5em;
   width: 0px;
-  gap: 20px;
   text-align: center;
   font-size: 25px;
   transition: all 2s;
-}
-@media all and (min-width: 375px) {
-  .heart-checkbox-restaurants {
-    right: 0.5em;
-  }
 }
 .heart-checkbox-restaurants input[type=checkbox], .heart-checkbox-restaurants .checked {
   display: none;
