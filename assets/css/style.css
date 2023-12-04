@@ -256,11 +256,6 @@ header h1 {
   padding: 20px;
   gap: 20px;
 }
-@media all and (min-width: 768px) {
-  .restaurants {
-    padding: 30px 5%;
-  }
-}
 .restaurants h2 {
   align-self: flex-start;
   font-size: 24px;
@@ -269,6 +264,7 @@ header h1 {
 }
 @media all and (min-width: 768px) {
   .restaurants {
+    padding: 30px 5%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2fr 10fr 10fr;
