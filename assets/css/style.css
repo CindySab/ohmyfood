@@ -422,7 +422,10 @@ header h1 {
   position: relative;
   bottom: 1.1em;
 }
-.heart-checkbox-restaurants input[type=checkbox], .heart-checkbox-restaurants .checked {
+.heart-checkbox-restaurants input[type=checkbox] {
+  visibility: hidden;
+}
+.heart-checkbox-restaurants .checked {
   opacity: 0;
   animation: heartend 2s ease-in;
 }

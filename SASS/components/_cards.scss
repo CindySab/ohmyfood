@@ -115,10 +115,8 @@
             opacity: 1;
             animation: heart 2s ease-out;
         }
-    }
-    & input[type="checkbox"]:checked ~ {
         & .unchecked{
             visibility: hidden;
         }
-    }
+    }   
 }
