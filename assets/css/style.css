@@ -65,6 +65,7 @@ header h1 {
   height: 63px;
   text-align: center;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 .location {
@@ -333,7 +334,7 @@ header h1 {
   position: relative;
   z-index: 2;
   width: 100%;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   border-top-right-radius: 25px;
   border-top-left-radius: 25px;
   top: -3.5em;
@@ -417,15 +418,21 @@ header h1 {
   font-size: 25px;
   transition: all 2s;
 }
+.heart-checkbox-restaurants .checked {
+  position: relative;
+  bottom: 1.1em;
+}
 .heart-checkbox-restaurants input[type=checkbox], .heart-checkbox-restaurants .checked {
-  display: none;
+  opacity: 0;
+  animation: heartend 2s ease-in;
 }
 .heart-checkbox-restaurants input[type=checkbox]:checked ~ .checked {
-  display: inline-block;
+  visibility: visible;
+  opacity: 1;
   animation: heart 2s ease-out;
 }
 .heart-checkbox-restaurants input[type=checkbox]:checked ~ .unchecked {
-  display: none;
+  visibility: hidden;
 }
 
 .catégories {
@@ -704,15 +711,21 @@ header h1 {
   font-size: 25px;
   transition: all 2s;
 }
+.heart-checkbox .unchecked {
+  position: relative;
+  bottom: -1.1em;
+}
 .heart-checkbox input[type=checkbox], .heart-checkbox .checked {
-  display: none;
+  opacity: 0;
+  animation: heartend 2s ease-in;
 }
 .heart-checkbox input[type=checkbox]:checked ~ .checked {
-  display: inline-block;
+  visibility: visible;
+  opacity: 1;
   animation: heart 2s ease-out;
 }
 .heart-checkbox input[type=checkbox]:checked ~ .unchecked {
-  display: none;
+  visibility: hidden;
 }
 
 footer {
@@ -792,6 +805,14 @@ footer {
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes heartend {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 @keyframes apparitionplat {

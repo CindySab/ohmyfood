@@ -100,19 +100,25 @@
     text-align: center;
     font-size: 25px;
     transition: all 2s;
+    & .unchecked {
+        position: relative;
+        bottom: -1.1em;
+    }
     & input[type="checkbox"],
         & .checked {
-            display: none;
+            opacity: 0;
+            animation: heartend 2s ease-in;
         }
     & input[type="checkbox"]:checked ~ {
         & .checked{
-            display: inline-block;
+            visibility: visible;
+            opacity: 1;
             animation: heart 2s ease-out;
         }
     }
     & input[type="checkbox"]:checked ~ {
         & .unchecked{
-            display: none;
+            visibility: hidden;
         }
     }
 }
